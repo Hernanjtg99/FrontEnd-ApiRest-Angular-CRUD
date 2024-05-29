@@ -1,0 +1,27 @@
+<h1>Crear Pelicula</h1>
+
+<form [formGroup]="formulario" (ngSubmit)="save()">
+
+<div>
+    <label for="nombre" >Nombre</label>
+    <input type="text" formControlName="nombre">
+</div>
+<div>
+    <label  for="genero">Genero</label>
+    <input type="text" formControlName="genero">
+</div>
+<div>
+    <label for="idioma">Idioma</label>
+    <input type="text" formControlName="idioma">
+</div>
+<div>
+    <label for="estreno">Estreno</label>
+    <input type="text" formControlName="estreno">
+</div>
+<div>
+   <input type="submit" value="Crear">
+   
+</div>
+
+</form>
+<button routerLink="/">Cancelar</button>

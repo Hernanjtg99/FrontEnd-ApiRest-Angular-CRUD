@@ -1,0 +1,28 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Idioma</th>
+            <th>Estreno</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (pelicula of peliculas; track pelicula.id) 
+        {
+            <tr>
+                <td>{{pelicula.id}}</td>
+                <td>{{pelicula.nombre}}</td>
+                <td>{{pelicula.genero}}</td>
+                <td>{{pelicula.idioma}}</td>
+                <td>{{pelicula.estreno}}</td>
+                <td><button routerLink="{{pelicula.id}}/edit">Editar</button></td>
+                <td><button (click)="delete(pelicula)">Eliminar</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button routerLink="/formulario">Crear</button>
